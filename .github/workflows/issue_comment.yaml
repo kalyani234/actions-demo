@@ -26,6 +26,7 @@ jobs:
           
    # Using Github Rest API in workflows
   comment-with-api:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Create comment with API
@@ -40,4 +41,3 @@ jobs:
           ORGANIZATION: ${{ github.event.repository.owner.login }}
           REPOSITORY: ${{ github.event.repository.name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        
